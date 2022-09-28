@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('https://img.freepik.com/fotos-gratis/festival-de-fogo-de-artificio-na-tailandia_1150-10790.jpg?w=1380&t=st=1664390501~exp=1664391101~hmac=a7bc99341f49620ea74b8f5df2f5b97b95d2db69865e7dd65ff9d731a6f0b95d');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+.title {
+    font-size: 50px;
+    
+}
+
+.year {
+    font-size: 70px;
+    margin: 20px;
+    color: rgba(250, 250, 250, 0.70);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Amiri Quran', serif;
+    width:  600px;
+    height: 450px;
+    backdrop-filter: blur(9px) saturate(180%);
+    -webkit-backdrop-filter: blur(9px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.54);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow:  5px 5px 10px #0a0612,
+    -5px -5px 10px #0b0614;
+}
+
+.countdown {
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+
+}
+
+.time {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+}
+
+a {
+    position: fixed;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    color: #f7f2f6;
+}
+
+a:hover {
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+
+.img-git{
+    height: 2rem;
+    width: 2rem;
+}
+
+/* Loading */
+
+.cont {
+    position: absolute;
+    top: 30%;
+    margin-top: -50px;
+    left: 50%;
+    margin-left: -50px;
+    width: 105px;
+    height: 105px;
+}
+
+.square {
+    width: 100px;
+    height: 5px;
+    -webkit-animation: desno 1s infinite;
+            animation: desno 1s infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.square2 {
+    width: 5px;
+    height: 100px;
+    opacity: 0;
+    -webkit-animation: desno2  1s infinite;
+            animation: desno2  1s infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.square3 {
+    width: 100px;
+    height: 5px;
+    margin-top: 100px;
+    opacity: 0;
+    -webkit-animation: desno3  1s infinite;
+            animation: desno3  1s infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.square4 {
+    width: 5px;
+    height: 100px;
+    margin-left: 100px;
+    margin-top: 0px;
+    opacity: 0;
+    -webkit-animation: desno3  1s infinite;
+            animation: desno3  1s infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.line {
+    border-radius: 2px;
+    background: #fff;
+    position: absolute;
+}
+
+
+
+@-webkit-keyframes desno {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    80% {
+        -webkit-transform: rotate(95deg);
+        -ms-transform: rotate(95deg);
+        transform: rotate(95deg);
+        -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+        transform-origin: bottom left;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+        transform-origin: bottom left;
+        opacity: 0;
+    }
+}
+
+@keyframes desno {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    80% {
+        -webkit-transform: rotate(95deg);
+        -ms-transform: rotate(95deg);
+        transform: rotate(95deg);
+        -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+        transform-origin: bottom left;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+        transform-origin: bottom left;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes desno2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: rotate(95deg);
+        -ms-transform: rotate(95deg);
+        transform: rotate(95deg);
+        -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+        transform-origin: bottom left;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+        transform-origin: bottom left;
+        opacity: 0;
+    }
+}
+
+@keyframes desno2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: rotate(95deg);
+        -ms-transform: rotate(95deg);
+        transform: rotate(95deg);
+        -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+        transform-origin: bottom left;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+        transform-origin: bottom left;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes desno3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: rotate(95deg);
+        -ms-transform: rotate(95deg);
+        transform: rotate(95deg);
+        -webkit-transform-origin: top right;
+        -ms-transform-origin: top right;
+        transform-origin: top right;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: top right;
+        -ms-transform-origin: top right;
+        transform-origin: top right;
+        opacity: 0;
+    }
+}
+
+@keyframes desno3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: rotate(95deg);
+        -ms-transform: rotate(95deg);
+        transform: rotate(95deg);
+        -webkit-transform-origin: top right;
+        -ms-transform-origin: top right;
+        transform-origin: top right;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: top right;
+        -ms-transform-origin: top right;
+        transform-origin: top right;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes desno4 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    80% {
+        -webkit-transform: rotate(95deg);
+        -ms-transform: rotate(95deg);
+        transform: rotate(95deg);
+        -webkit-transform-origin: top right;
+        -ms-transform-origin: top right;
+        transform-origin: top right;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: top right;
+        -ms-transform-origin: top right;
+        transform-origin: top right;
+        opacity: 0;
+        -webkit-animation: desno 0.5s;
+                animation: desno 0.5s;
+    }
+}
+
+@keyframes desno4 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    80% {
+        -webkit-transform: rotate(95deg);
+        -ms-transform: rotate(95deg);
+        transform: rotate(95deg);
+        -webkit-transform-origin: top right;
+        -ms-transform-origin: top right;
+        transform-origin: top right;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: top right;
+        -ms-transform-origin: top right;
+        transform-origin: top right;
+        opacity: 0;
+        -webkit-animation: desno 0.5s;
+                animation: desno 0.5s;
+    }
+}
