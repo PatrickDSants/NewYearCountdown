@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('/img/firework-festival-in-thailand.jpg');
+    background: url('/img/firework-festival-in-thailand.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
